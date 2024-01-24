@@ -14,9 +14,12 @@ export default function Parent() {
       name: "Gerald",
     },
   ];
+  function parentFunction(message){
+    alert(message);
+  }
   return (
     <>
-      <Child pets={pets}></Child>
+      <Child pets={pets} parentFunction={parentFunction}></Child>
     </>
   );
 }

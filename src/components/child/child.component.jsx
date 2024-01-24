@@ -1,6 +1,10 @@
 export default function Child(prop) {
   console.log("🚀 ~ Child ~ prop:", prop);
   let pets = prop.pets;
+  function handleOnClick(res){
+    console.log("🚀 ~ handleOnClick ~ res:", res)
+    prop.parentFunction("Message From Child")
+  }
   return (
     <>
       {pets.map((pet) => {
@@ -14,6 +18,9 @@ export default function Child(prop) {
           </div>
         );
       })}
+      <button onClick={handleOnClick}>
+        Call Parent
+      </button>
     </>
   );
 }
