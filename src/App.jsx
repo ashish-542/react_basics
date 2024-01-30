@@ -2,16 +2,19 @@ import Message from "./components/message/message.component";
 import Child from "./components/child/child.component";
 import { useState } from "react";
 function App() {
-  const [name,setName]=useState([]);
-  console.log("🚀 ~ App ~ name:", name)
- function  getNameFunction(val){
-  console.log("🚀 ~  getNameFunction ~ val:", val)
-  setName([...name,val])
- }
+  const [users,setUsers]=useState([]);
+  function  getUserFunction(inputName,inputAge){
+    console.log("🚀 ~  getUserFunction ~ val:", inputName,inputAge);
+    let newUsers=[...users,{
+      name:inputName,
+      age:inputAge
+    }]
+    setUsers(newUsers)
+  }
   return(
     <>
-    <Child name={name}/>
-    <Message  getNameFunction={getNameFunction}/>
+    <Child users={users}/>
+    <Message  getUserFunction={getUserFunction}/>
     </>
   )
 }
