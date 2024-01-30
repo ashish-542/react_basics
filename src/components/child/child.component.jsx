@@ -1,6 +1,10 @@
 export default function Child(prop) {
   console.log("🚀 ~ Child ~ prop:", prop);
   return <>
-    <h1>{prop.name}</h1>
+    {prop.name.map((n)=>{
+      return(
+        <h1>{n}</h1>
+      )
+    })}
   </>;
 }
