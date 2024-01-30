@@ -1,8 +1,8 @@
-import Parent from "./components/parent/parent.component";
+import Message from "./components/message/message.component";
 function App() {
   return(
     <>
-    <Parent/>
+    <Message/>
     </>
   )
 }
