@@ -1,25 +1,14 @@
 import Child from "../child/child.component";
 export default function Parent() {
-  let pets = [
-    {
-      id: 1,
-      type: "dog",
-      breed: "beagle",
-      name: "Gus",
-    },
-    {
-      id: 2,
-      type: "cat",
-      breed: "calico",
-      name: "Gerald",
-    },
-  ];
-  function parentFunction(message){
-    alert(message);
+   function myFunction(param1,param2) {
+    console.log("🚀 ~ myFunction ~ param2:", param2)
+    console.log("🚀 ~ myFunction ~ param1:", param1)
+    let res=param1+param2;
+    alert(`Result is ${res}`);
   }
   return (
     <>
-      <Child pets={pets} parentFunction={parentFunction}></Child>
+      <Child fun={myFunction}></Child>
     </>
   );
 }
