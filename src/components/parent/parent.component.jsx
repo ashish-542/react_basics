@@ -1,14 +1,10 @@
 import Child from "../child/child.component";
+import Message from "../message/message.component";
 export default function Parent() {
-   function myFunction(param1,param2) {
-    console.log("🚀 ~ myFunction ~ param2:", param2)
-    console.log("🚀 ~ myFunction ~ param1:", param1)
-    let res=param1+param2;
-    alert(`Result is ${res}`);
-  }
   return (
-    <>
-      <Child fun={myFunction}></Child>
-    </>
+    <Child>
+      <h2>I am a children prop heading</h2>
+      <Message />
+    </Child>
   );
 }
