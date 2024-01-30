@@ -3,7 +3,7 @@ export default function Child(prop) {
   let pets = prop.pets;
   function handleOnClick(res){
     console.log("🚀 ~ handleOnClick ~ res:", res)
-    prop.parentFunction("Message From Child")
+    prop.parentFunction("Child is calling parent")
   }
   return (
     <>
